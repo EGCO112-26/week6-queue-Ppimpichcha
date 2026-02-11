@@ -12,10 +12,10 @@ void enqueue_struct(Queue* q, int x){
   if(new_node){ 
   new_node->data=x;
   new_node->nextPtr=NULL;
-
+ 
   /*Finish enqueue */
 
-  if(q->size==0) q->headPtr==new_node;
+  if(q->size==0) q->headPtr=new_node;
   else q->tailPtr->nextPtr=new_node;
   q->tailPtr=new_node;
   q->size++;
@@ -37,6 +37,7 @@ int dequeue_struct(Queue *q){
     }
    q->size--;
    free(t);
+   
    return value;
    }
    printf("Empty queue\n");

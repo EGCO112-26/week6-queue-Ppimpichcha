@@ -9,7 +9,7 @@ int main(int argc , char **argv) {
    NodePtr tailPtr=NULL;
 
   Queue  q;
-   q. headPtr=NULL;
+   q.headPtr=NULL;
    q.tailPtr=NULL;
    q.size=0;
 
@@ -20,11 +20,11 @@ int main(int argc , char **argv) {
             //x=dequeue_struct(&q);
             int value=dequeue_struct(&q);
              if(value !=0) printf("dequeuing %d\n",value);
-          
+        }
         else {
         enqueue_struct(&q, atoi(argv[i]));
        
       }
- }
+    }
   return 0;
 }

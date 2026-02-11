@@ -16,15 +16,11 @@ int main(int argc , char **argv) {
    int i,x;
     for(i=1;i<argc;i++){
         if(strcmp(argv[i],"x")==0){ //คือถ้าเป็น x ให้ทำการ dequeue แต่ถ้าตัวอื่นๆให้ enqueue
-          if(q.size>0){
+        
             //x=dequeue_struct(&q);
             int value=dequeue_struct(&q);
              if(value !=0) printf("dequeuing %d\n",value);
-          }
-          else{
-            printf("Empty queue\n");
-          }
-        }
+          
         else {
         enqueue_struct(&q, atoi(argv[i]));
        
